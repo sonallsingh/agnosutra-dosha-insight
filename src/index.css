@@ -2,95 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AgnoSutra Design System - Ayurvedic Wellness Theme */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm Ayurvedic Color Palette */
+    --background: 40 33% 98%;
+    --foreground: 25 30% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 40% 99%;
+    --card-foreground: 25 30% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 40% 99%;
+    --popover-foreground: 25 30% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Saffron/Amber Primary */
+    --primary: 36 85% 57%;
+    --primary-foreground: 40 33% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sage Green Secondary */
+    --secondary: 150 25% 45%;
+    --secondary-foreground: 40 33% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm Cream Muted */
+    --muted: 40 30% 94%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Terracotta Accent */
+    --accent: 18 60% 55%;
+    --accent-foreground: 40 33% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 33% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 36 85% 57%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Dosha Colors */
+    --vata: 220 70% 60%;
+    --vata-light: 220 70% 95%;
+    --pitta: 15 80% 55%;
+    --pitta-light: 15 80% 95%;
+    --kapha: 150 50% 45%;
+    --kapha-light: 150 50% 95%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(36 85% 57%) 0%, hsl(25 75% 50%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(150 25% 45%) 0%, hsl(160 30% 40%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(40 40% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(40 40% 99%) 0%, hsl(40 35% 97%) 100%);
+    --gradient-vata: linear-gradient(135deg, hsl(220 70% 60%) 0%, hsl(230 65% 55%) 100%);
+    --gradient-pitta: linear-gradient(135deg, hsl(15 80% 55%) 0%, hsl(5 75% 50%) 100%);
+    --gradient-kapha: linear-gradient(135deg, hsl(150 50% 45%) 0%, hsl(140 45% 40%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(25 30% 15% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(25 30% 15% / 0.12);
+    --shadow-lg: 0 16px 48px -16px hsl(25 30% 15% / 0.15);
+    --shadow-glow: 0 0 40px -10px hsl(36 85% 57% / 0.3);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 40 30% 97%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 36 85% 57%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 40 30% 94%;
+    --sidebar-accent-foreground: 25 30% 15%;
+    --sidebar-border: 40 25% 88%;
+    --sidebar-ring: 36 85% 57%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 25% 10%;
+    --foreground: 40 30% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 20% 14%;
+    --card-foreground: 40 30% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 20% 14%;
+    --popover-foreground: 40 30% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 36 85% 57%;
+    --primary-foreground: 25 25% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 25% 40%;
+    --secondary-foreground: 40 30% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 20% 20%;
+    --muted-foreground: 40 20% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 18 60% 55%;
+    --accent-foreground: 25 25% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 30% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 15% 25%;
+    --input: 25 15% 25%;
+    --ring: 36 85% 57%;
+
+    --sidebar-background: 25 20% 12%;
+    --sidebar-foreground: 40 30% 95%;
+    --sidebar-primary: 36 85% 57%;
+    --sidebar-primary-foreground: 25 25% 10%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 40 30% 95%;
+    --sidebar-border: 25 15% 25%;
+    --sidebar-ring: 36 85% 57%;
   }
 }
 
@@ -99,7 +122,153 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300;
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+  }
+
+  .btn-hero:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-lg), 0 0 50px -10px hsl(36 85% 57% / 0.4);
+  }
+
+  .btn-hero-outline {
+    @apply border-2 border-primary text-primary font-semibold px-8 py-4 rounded-full transition-all duration-300 bg-transparent;
+  }
+
+  .btn-hero-outline:hover {
+    @apply bg-primary text-primary-foreground scale-105;
+  }
+
+  /* Card Variants */
+  .card-elevated {
+    @apply bg-card rounded-2xl p-6 transition-all duration-300;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card-elevated:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Dosha Cards */
+  .card-vata {
+    @apply rounded-2xl p-6;
+    background: linear-gradient(135deg, hsl(var(--vata-light)) 0%, hsl(220 70% 92%) 100%);
+    border: 1px solid hsl(var(--vata) / 0.2);
+  }
+
+  .card-pitta {
+    @apply rounded-2xl p-6;
+    background: linear-gradient(135deg, hsl(var(--pitta-light)) 0%, hsl(15 80% 92%) 100%);
+    border: 1px solid hsl(var(--pitta) / 0.2);
+  }
+
+  .card-kapha {
+    @apply rounded-2xl p-6;
+    background: linear-gradient(135deg, hsl(var(--kapha-light)) 0%, hsl(150 50% 92%) 100%);
+    border: 1px solid hsl(var(--kapha) / 0.2);
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/70 border border-white/20;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-secondary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-secondary);
+  }
+
+  /* Decorative Elements */
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .pattern-lines {
+    background-image: repeating-linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0.05) 0px,
+      hsl(var(--primary) / 0.05) 1px,
+      transparent 1px,
+      transparent 60px
+    );
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    animation: gradient-shift 8s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Scroll Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
